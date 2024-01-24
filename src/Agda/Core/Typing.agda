@@ -117,7 +117,7 @@ data TyTerm {α} Γ where
 
   TyConv
     : Γ ⊢ u ∶ a
-    → Γ ⊢ (unType a) ≅ (unType b) ∶ (unType c)
+    → Γ ⊢ (unType a) ≅ (unType b) ∶ s
     ----------------
     → Γ ⊢ u ∶ b
 
