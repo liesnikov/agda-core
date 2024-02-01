@@ -97,7 +97,7 @@ convertElims : ∀ Γ
                  (u : Term α)
                  (v v' : Elim α)
              → TCM (Σ ((Elim α → Term α) → Term α) (λ f → Γ ⊢ v ≃ v'))
-convertSubsts : ∀ {@0 α β} Γ → (ty : Telescope α β) → (s p : β ⇒ α) → TCM (Γ ⊢ s ⇔ p)
+convertSubsts : ∀ {@0 α β} Γ → (ty : Telescope α (revScope β)) → (s p : β ⇒ α) → TCM (Γ ⊢ s ⇔ p)
 
 convCons : ∀ Γ
            (s : Term α)
@@ -195,13 +195,15 @@ convertElims ctx t u (EArg w) (EArg w') = do
 convertElims ctx s u w w' = tcError "not implemented yet"
 
 convertSubsts ctx tel SNil p = return CSNil
-convertSubsts ctx tel (SCons x st) p =
-  caseSubstBind (λ ss → TCM (ctx ⊢ (SCons x st) ⇔ ss)) p $ λ y pt →
-  caseTelBind _ tel $ λ a tel → do
-    let r = rezzScope ctx
-    hc ← convertCheck ctx (unType a) x y
-    tc ← convertSubsts ctx (substTelescope (SCons x (idSubst r)) tel) st pt
-    return $ CSCons hc tc
+convertSubsts {α} ctx tel (SCons x st) p =
+  caseSubstBind (λ ss → TCM (ctx ⊢ (SCons x st) ⇔ ss)) p $ λ y pt → do
+  let ntel = subst' (Telescope α) (revBind _ _) tel
+  {!!}
+  --caseTelBind _ tel $ λ a tel → do
+  --  let r = rezzScope ctx
+  --  hc ← convertCheck ctx (unType a) x y
+  --  tc ← convertSubsts ctx (substTelescope (SCons x (idSubst r)) tel) st pt
+  --  return $ CSCons hc tc
 
 convertCheck ctx ty t q = do
   let r = rezzScope ctx

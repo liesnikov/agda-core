@@ -20,14 +20,15 @@ data Telescope (@0 α : Scope name) : @0 Scope name → Set where
 
 {-# COMPILE AGDA2HS Telescope #-}
 
-opaque
-  unfolding Scope
+{-opaque
+  unfolding Scope iSemigroupScope
   caseTelBind : {@0 x : name}
-                (P : @0 Telescope α (x ◃ β) → Set)
-                (tel : Telescope α (x ◃ β))
+                {β : Scope name}
+                (P : @0 Telescope α (β ▹ x) → Set)
+                (tel : Telescope α (β ▹ x))
               → ((a : Type α) (tel : Telescope (x ◃ α) β) → P (ExtendTel x a tel))
               → P tel
-  caseTelBind P (ExtendTel _ a tel) f = f a tel
+  caseTelBind {β} P tel f = {!!}-}
 
 record Constructor (@0 pars : Scope name) (@0 ixs : Scope name) (@0 c : name) (@0 cp  : c ∈ conScope) : Set where
   field
