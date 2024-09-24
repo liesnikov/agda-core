@@ -10,11 +10,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1727189060,
-        "narHash": "sha256-/BqRifArT2TOpIkOVI867LrJdUZQTaKsoMBGyFoXsoU=",
+        "lastModified": 1727192372,
+        "narHash": "sha256-L6x24L+A7utHy5F27TRXQnFTCC45LxTUWKNIFlUGhAY=",
         "owner": "agda",
         "repo": "agda2hs",
-        "rev": "d934308248be9bcfa12e65e419b1dbc6f0b436b8",
+        "rev": "2b72ccb752accf2906c252c28839bbcae30d6f62",
         "type": "github"
       },
       "original": {
@@ -77,11 +77,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1727185459,
-        "narHash": "sha256-qN5pBs5qNnnb6XbkmQepF3GgugjcyNti6he/9XZJZ9M=",
+        "lastModified": 1727192444,
+        "narHash": "sha256-UX58GmKDng1Ic2jhXkpwY1pAPsRKpkbzy4U1UxEOzJQ=",
         "owner": "jespercockx",
         "repo": "scope",
-        "rev": "c0542fae948ee3cbb98c2f880629ad70c225f79d",
+        "rev": "de82adc200c79a9514c8423a6070a4ace18b11a1",
         "type": "github"
       },
       "original": {
