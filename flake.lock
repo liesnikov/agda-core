@@ -10,15 +10,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1727189060,
-        "narHash": "sha256-/BqRifArT2TOpIkOVI867LrJdUZQTaKsoMBGyFoXsoU=",
-        "owner": "agda",
+        "lastModified": 1734528411,
+        "narHash": "sha256-3nU+SHohA7cC9uWllGXfXypO4daMAGgWDZs/BRr0d1I=",
+        "owner": "liesnikov",
         "repo": "agda2hs",
-        "rev": "d934308248be9bcfa12e65e419b1dbc6f0b436b8",
+        "rev": "b902368b0c9029eabc852c057f9fc14f33f71a84",
         "type": "github"
       },
       "original": {
-        "owner": "agda",
+        "owner": "liesnikov",
         "repo": "agda2hs",
         "type": "github"
       }
@@ -77,15 +77,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1727185459,
-        "narHash": "sha256-qN5pBs5qNnnb6XbkmQepF3GgugjcyNti6he/9XZJZ9M=",
-        "owner": "jespercockx",
+        "lastModified": 1734541217,
+        "narHash": "sha256-P8vQ3eENkA5F7LpSwTShKiLIsaawwyPbaKeClqEH1pw=",
+        "owner": "liesnikov",
         "repo": "scope",
-        "rev": "c0542fae948ee3cbb98c2f880629ad70c225f79d",
+        "rev": "19ca575c12b30c975bdbbf9827c72d3f63f38241",
         "type": "github"
       },
       "original": {
-        "owner": "jespercockx",
+        "owner": "liesnikov",
+        "ref": "flake-less-nix",
         "repo": "scope",
         "type": "github"
       }

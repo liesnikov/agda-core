@@ -4,12 +4,12 @@
   inputs.nixpkgs.url = github:NixOS/nixpkgs;
   inputs.flake-utils.url = github:numtide/flake-utils;
   inputs.agda2hs = {
-    url = "github:agda/agda2hs";
+    url = "github:liesnikov/agda2hs";
     inputs.nixpkgs.follows = "nixpkgs";
     inputs.flake-utils.follows = "flake-utils";
   };
   inputs.scope = {
-    url = "github:jespercockx/scope";
+    url = "github:liesnikov/scope/flake-less-nix";
     inputs.nixpkgs.follows = "nixpkgs";
     inputs.agda2hs.follows = "agda2hs";
     inputs.flake-utils.follows = "flake-utils";
